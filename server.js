@@ -56,8 +56,9 @@ server = http.createServer(function(request, response){
     });
   }
 );
-
-server.listen(3000);
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 3000
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+server.listen(server_port);
 
 var listener = io.listen(server);
 
@@ -66,7 +67,7 @@ listener.on('connection', function(client){
 
   client.on('message', function(data){
     sh.stdin.write(data+"\n");
-    client.send(new Buffer("> "+data));
+    client.send(new Buffer("> "+data.toString()));
   });
 
   sh.stdout.on('data', function(data) {

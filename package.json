@@ -1,0 +1,24 @@
+{
+  "name": "terminal",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "socket.io": "^1.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/santoshkumarsingh/nodejsterminal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santoshkumarsingh/nodejsterminal/issues"
+  },
+  "homepage": "https://github.com/santoshkumarsingh/nodejsterminal"
+}
